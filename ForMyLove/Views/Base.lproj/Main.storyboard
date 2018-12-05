@@ -28,7 +28,7 @@
                                     <action selector="StartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2T-PI-TcG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kon" translatesAutoresizingMaskIntoConstraints="NO" id="QOe-GL-y1e">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kon" translatesAutoresizingMaskIntoConstraints="NO" id="QOe-GL-y1e">
                                 <rect key="frame" x="16" y="20" width="343" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-356" y="269"/>
+            <point key="canvasLocation" x="-502" y="331"/>
         </scene>
     </scenes>
     <resources>

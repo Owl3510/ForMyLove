@@ -10,23 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        assignbackground()
-        imageView.animationImages = images
-        imageView.animationDuration = 6
+    
+    
+    private var music = Music()
+    private var playchoose = true
+    private let images = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "must")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "kon")!, UIImage(named: "10")!, UIImage(named: "11")!]
+    
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
+            
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
     }
-    
-    var music = Music()
-    
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var touchBut: UIButton!
     @IBOutlet weak var musicVolume: UISlider!
-    
-    let images = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "must")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "kon")!, UIImage(named: "10")!, UIImage(named: "11")!]
     
     @IBAction func StartButton(_ sender: Any) {
         
@@ -41,7 +41,28 @@ class ViewController: UIViewController {
         music.setVolume(musicVolume.value)
     }
     
-    func assignbackground(){
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        assignbackground()
+        imageView.animationImages = images
+        imageView.animationDuration = 6
+    }
+    
+    @objc private func handleTap( sender: UITapGestureRecognizer) {
+        
+        if playchoose {
+            imageView.stopAnimating()
+            music.player?.stop()
+            playchoose = false
+        } else {
+            imageView.startAnimating()
+            music.player?.play()
+            playchoose = true
+        }
+    }
+    
+    private func assignbackground(){
         let background = UIImage(named: "6082.png")
         
         let imageViews = UIImageView(frame: view.bounds)
