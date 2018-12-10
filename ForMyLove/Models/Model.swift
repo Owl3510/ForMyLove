@@ -10,27 +10,14 @@ import AVFoundation
 
 struct Music {
     
-    var player: AVAudioPlayer?
-    
-    public mutating func playSound() {
-        
-        guard let url = Bundle.main.url(forResource: "Kostya", withExtension: "mov") else {
-            print("url not found")
-            return
-        }
-        
-        do {
-            
-            try AVAudioSession.sharedInstance().setActive(true)
-    
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            player?.numberOfLoops = -1
-            player!.play()
-        } catch let error as NSError {
-            print("error: \(error.localizedDescription)")
-        }
+    var player: AVPlayer?
+    let onAir = URL(string: "http://stream.hoster.by:8081/pilotfm/pilot/icecast.audio")
 
+    public mutating func playSound() {
+
+        let playerItem = AVPlayerItem(url: onAir!)
+        player = AVPlayer(playerItem: playerItem)
+        player!.play()
     }
     
     public func setVolume(_ value: Float) {

@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         if playchoose {
             imageView.stopAnimating()
-            music.player?.stop()
+//            music.player?.stop()
             playchoose = false
         } else {
             imageView.startAnimating()
