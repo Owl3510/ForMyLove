@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var touchBut: UIButton!
     @IBOutlet weak var musicVolume: UISlider!
     
-    @IBAction func StartButton(_ sender: Any) {
+    @IBAction func StartButton(_ sender: UIButton) {
         
         touchBut.isHidden = true
         display.text = "From Love with KON'"
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         music.playSound()
     }
     
-    @IBAction func setVolume(_ sender: Any) {
+    @IBAction func setVolume(_ sender: UISlider) {
         music.setVolume(musicVolume.value)
     }
     
@@ -47,6 +47,14 @@ class ViewController: UIViewController {
         assignbackground()
         imageView.animationImages = images
         imageView.animationDuration = 6
+        
+        UIView.animate(withDuration: 3, delay: 2, options: .curveEaseOut, animations: {
+            self.imageView.frame.origin.y += 150
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 3, delay: 1, options: .curveEaseOut, animations: {
+            self.imageView.frame.origin.y -= 150
+        }, completion: nil)
     }
     
     @objc private func handleTap( sender: UITapGestureRecognizer) {
