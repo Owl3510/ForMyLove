@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D76089F2190A474004AD977 /* Kostya.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0D76089E2190A473004AD977 /* Kostya.mov */; };
+		0D74BABC21C3BC5100DE6BD6 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BABB21C3BC5100DE6BD6 /* Pulse.swift */; };
 		0D90F8FA2190743C00CAD679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90F8F92190743C00CAD679 /* AppDelegate.swift */; };
 		0D90F8FC2190743C00CAD679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90F8FB2190743C00CAD679 /* ViewController.swift */; };
 		0D90F8FF2190743C00CAD679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D90F8FD2190743C00CAD679 /* Main.storyboard */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D76089E2190A473004AD977 /* Kostya.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Kostya.mov; path = ForMyLove/Kostya.mov; sourceTree = "<group>"; };
+		0D74BABB21C3BC5100DE6BD6 /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
 		0D90F8F62190743C00CAD679 /* ForMyLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForMyLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D90F8F92190743C00CAD679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D90F8FB2190743C00CAD679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +53,6 @@
 		0D90F8ED2190743C00CAD679 = {
 			isa = PBXGroup;
 			children = (
-				0D76089E2190A473004AD977 /* Kostya.mov */,
 				0D90F8F82190743C00CAD679 /* ForMyLove */,
 				0D90F8F72190743C00CAD679 /* Products */,
 			);
@@ -74,6 +73,7 @@
 				0D98C8272191690C00F9DCD1 /* Views */,
 				0D98C8262191690400F9DCD1 /* Models */,
 				0D7608A02190A4CE004AD977 /* Supportnig Files */,
+				0D74BABB21C3BC5100DE6BD6 /* Pulse.swift */,
 			);
 			path = ForMyLove;
 			sourceTree = "<group>";
@@ -160,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D76089F2190A474004AD977 /* Kostya.mov in Resources */,
 				0D90F9042190743C00CAD679 /* LaunchScreen.storyboard in Resources */,
 				0D90F9012190743C00CAD679 /* Assets.xcassets in Resources */,
 				0D90F8FF2190743C00CAD679 /* Main.storyboard in Resources */,
@@ -177,6 +176,7 @@
 				0D90F8FC2190743C00CAD679 /* ViewController.swift in Sources */,
 				0D90F8FA2190743C00CAD679 /* AppDelegate.swift in Sources */,
 				0D98C82A2191695800F9DCD1 /* Model.swift in Sources */,
+				0D74BABC21C3BC5100DE6BD6 /* Pulse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

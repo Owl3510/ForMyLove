@@ -35,6 +35,13 @@ class ViewController: UIViewController {
         imageView.startAnimating()
         musicVolume.isHidden = false
         music.playSound()
+        UIView.animate(withDuration: 2, delay: 2, options: .curveEaseInOut, animations: {
+            self.imageView.frame.origin.y += 150
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 2, delay: 4, options: .curveEaseInOut, animations: {
+            self.imageView.frame.origin.y -= 150
+        }, completion: nil)
     }
     
     @IBAction func setVolume(_ sender: UISlider) {
@@ -47,20 +54,13 @@ class ViewController: UIViewController {
         assignbackground()
         imageView.animationImages = images
         imageView.animationDuration = 6
-        
-        UIView.animate(withDuration: 3, delay: 2, options: .curveEaseOut, animations: {
-            self.imageView.frame.origin.y += 150
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 3, delay: 1, options: .curveEaseOut, animations: {
-            self.imageView.frame.origin.y -= 150
-        }, completion: nil)
     }
     
     @objc private func handleTap( sender: UITapGestureRecognizer) {
         
         if playchoose {
             imageView.stopAnimating()
+            music.player?.pause() //TODO
 //            music.player?.stop()
             playchoose = false
         } else {

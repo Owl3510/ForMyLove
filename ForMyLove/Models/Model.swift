@@ -11,7 +11,8 @@ import AVFoundation
 struct Music {
     
     var player: AVPlayer? 
-    let onAir = URL(string: "http://stream.hoster.by:8081/pilotfm/pilot/icecast.audio")
+    let onAir = URL(string: "https://stream.hoster.by/unistar/unistar-128kb/icecast.audio?hash=1553450229417608")
+    let onAir1 = URL(string: "http://stream.hoster.by:8081/pilotfm/pilot/icecast.audio")
 
     public mutating func playSound() {
 
