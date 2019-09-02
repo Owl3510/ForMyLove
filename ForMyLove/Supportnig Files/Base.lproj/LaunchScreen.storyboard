@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special For MyLove" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNM-Ac-ss4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special For MyLove" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNM-Ac-ss4">
                                 <rect key="frame" x="16" y="410" width="343" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="4FU-Ed-Z4W"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.00312278974" blue="0.83126192379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kon" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-sS-rsi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-sS-rsi">
                                 <rect key="frame" x="16" y="20" width="343" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="© 2018 Ivan Korsik" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN1-aB-kbt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2018 Ivan Korsik" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN1-aB-kbt">
                                 <rect key="frame" x="16" y="626" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KPM-IG-yk2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.86675935979999996" green="0.18285657220000001" blue="0.06320650454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PNM-Ac-ss4" firstAttribute="leading" secondItem="pN1-aB-kbt" secondAttribute="leading" id="2IR-sW-h7Y"/>
+                            <constraint firstItem="cD8-sS-rsi" firstAttribute="leading" secondItem="PNM-Ac-ss4" secondAttribute="leading" id="5Yq-JN-h49"/>
+                            <constraint firstAttribute="bottom" secondItem="pN1-aB-kbt" secondAttribute="bottom" constant="20" symbolic="YES" id="J89-Fi-Yfr"/>
+                            <constraint firstItem="cD8-sS-rsi" firstAttribute="trailing" secondItem="PNM-Ac-ss4" secondAttribute="trailing" id="LLs-WL-c5D"/>
+                            <constraint firstItem="cD8-sS-rsi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="PM5-vE-Kc3"/>
+                            <constraint firstItem="PNM-Ac-ss4" firstAttribute="trailing" secondItem="pN1-aB-kbt" secondAttribute="trailing" id="PSP-Fn-eRY"/>
+                            <constraint firstItem="cD8-sS-rsi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SpZ-TA-Dt9"/>
+                            <constraint firstItem="PNM-Ac-ss4" firstAttribute="top" secondItem="cD8-sS-rsi" secondAttribute="bottom" constant="40" id="UFg-e7-Oed"/>
+                            <constraint firstItem="pN1-aB-kbt" firstAttribute="top" secondItem="PNM-Ac-ss4" secondAttribute="bottom" constant="69" id="jfD-Gg-qmc"/>
+                            <constraint firstItem="cD8-sS-rsi" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="oDL-vt-kYf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -47,6 +62,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kon" width="720" height="409"/>
+        <image name="1" width="2560" height="1600"/>
     </resources>
 </document>

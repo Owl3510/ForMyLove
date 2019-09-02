@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     private var music = Music()
     private var playchoose = true
-    private let images = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "must")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "kon")!, UIImage(named: "10")!, UIImage(named: "11")!]
+    private let images = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "6")!, UIImage(named: "4")!, UIImage(named: "5")!]
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func StartButton(_ sender: UIButton) {
         
         touchBut.isHidden = true
-        display.text = "From Love with KON'"
+        display.text = "From L with KON'"
         imageView.startAnimating()
         musicVolume.isHidden = false
         music.playSound()
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         assignbackground()
         imageView.animationImages = images
         imageView.animationDuration = 6
+        music.createSound()
     }
     
     @objc private func handleTap( sender: UITapGestureRecognizer) {

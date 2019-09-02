@@ -14,10 +14,13 @@ struct Music {
     let onAir = URL(string: "https://stream.hoster.by/unistar/unistar-128kb/icecast.audio?hash=1553450229417608")
     let onAir1 = URL(string: "http://stream.hoster.by:8081/pilotfm/pilot/icecast.audio")
 
-    public mutating func playSound() {
-
+    public mutating func createSound() {
         let playerItem = AVPlayerItem(url: onAir!)
         player = AVPlayer(playerItem: playerItem)
+    }
+    
+    public mutating func playSound() {
+
         player!.play()
     }
     
